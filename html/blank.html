@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="../css/blank.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона - пустая страница</title>
+  <link rel="stylesheet" href="../css/blank.css">
+</head>
 
-  <body>
+<body>
+  <header class="main-header">
+    <nav class="main-nav">
+      <a class="logo" href="../index.html">
+        <img src="img/logo.svg" width="138" height="70" alt="Логотип сайта городка Седона">
+      </a>
+      <ul class="site-navigation">
+        <li class="site-navigation-item">
+          <a href="#">Информация</a>
+        </li>
+        <li class="site-navigation-item">
+          <a href="#">Фото и видео</a>
+        </li>
+        <li class="site-navigation-item">
+          <a href="#">Карта штата</a>
+        </li>
+        <li class="site-navigation-item">
+          <a href="catalog.html">Гостиницы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <header>
-      <nav>
-        <a href="../index.html">
-          <img src="img/logo.svg" width="138" height="70" alt="CITY OF SEDONA">
-        </a>
-        <ul>
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
-        </ul>
-      </nav>
-    </header>
+  <main>
+    <h1 class="visually-hidden">Добро пожаловать в великолепную Седону</h1>
+    <section class="promo">
+      <img src="#" width="1200" height="509" alt="Природа Седоны">
+      <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
+      <img src="#" width="1199" height="594" alt="Карта окрестностей Седоны">
+    </section>
+  </main>
 
-    <main>
+  <footer class="main-footer">
+    <section class="contacts">
+      <h2 class="visually-hidden">Как нас найти</h2>
+    </section>
 
-      <h1>
-        WELCOME to the gorgeous SEDONA<br>
-        "Because the Grand Canyon sucks!"
-      </h1>
-
+    <section class="footer-info">
+        <h2 class="visually-hidden">Дополнительная информация по сайту</h2>
       <section>
-        <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
-      </section>
-
-    </main>
-
-    <footer>
-
-      <section>
-        <h2>#VISITSEDONA</h2>
+        <h3>#VISITSEDONA</h3>
         <a href="tel:+74956660166">Тел: +7(495) 666-01-66</a>
       </section>
 
       <section>
-        <h2>Давайте дружить!</h2>
+        <h3 class="visually-hidden">Давайте дружить!</h3>
         <ul>
           <li>
             <a href="#">twitter</a>
@@ -61,8 +69,7 @@
         Website by
         <a href="https://htmlacademy.ru">HTML Academy</a>
       </p>
-
-    </footer>
-
-    </body>
-  </html>
+    </section>
+  </footer>
+</body>
+</html>
