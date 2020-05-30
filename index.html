@@ -11,9 +11,9 @@
 <body>
   <header class="main-header">
     <nav class="main-nav">
-      <a class="logo">
-        <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип сайта городка Седона">
-      </a>
+        <a class="logo">
+          <img src="img/logo-sedona.svg" width="138" height="70" alt="Логотип сайта городка Седона">
+        </a>
       <ul class="site-navigation">
         <li class="site-navigation-item">
           <a href="#">Информация</a>
@@ -34,11 +34,9 @@
   <main>
     <h1 class="visually-hidden">Добро пожаловать в великолепную Седону</h1>
     <section class="promo">
-
       <img src="img/background-photo.jpg" width="1200" height="509" alt="Природа Седоны">
       <img src="img/intro-welcome.svg" width="458" height="352" alt="Добро пожаловать в великолепную Седону">
       <img src="img/background-bottom.svg" width="1200" height="272" alt="Нижняя форма">
-      
       <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
     </section>
@@ -136,7 +134,32 @@
         Укажите предполагаемые даты поездки,<br>
         и мы покажем вам лучшие предложения гостиниц в Седоне
       </p>
-      <a href="form.html">Поиск гостиницы в Седоне</a>
+      <h3>Поиск гостиницы в Седоне</h3>
+      <form action="https://echo.htmlacademy.ru/courses" method="post">
+        <div>
+          <lable for="arrival">Дата заезда: </lable>
+          <input id="arrival" type="text" name="arrival" placeholder="24 АПРЕЛЯ 2017">
+          <img src="img/calendar.svg" width="21" height="22" alt="Календарь">
+        </div>
+
+        <div>
+          <lable for="departure">Дата выезда: </lable>
+          <input id="departure" type="text" name="departure" placeholder="4 ИЮЛЯ 2017">
+          <img src="img/calendar.svg" width="21" height="22" alt="Календарь">
+        </div>
+
+        <div>
+          <lable for="adults">Взрослые: </lable>
+          <input id="adults" type="text" name="adults" placeholder="- 2 +">
+        </div>
+
+        <div>
+          <lable for="children">Дети: </lable>
+          <input id="children" type="text" name="children" placeholder="- 0 +">
+        </div>
+
+        <button type="submit">НАЙТИ</button>
+      </form>
     </section>
     <div>
       <img src="img/map.png" width="1199" height="594" alt="Карта окрестностей Седоны">
