@@ -34,8 +34,8 @@
   <main>
     <h1 class="visually-hidden">Добро пожаловать в великолепную Седону</h1>
     <section class="filter">
-      <h2 class="visually-hidden">Фильтр жилья в Седоне</h2>
-      <form action="https://echo.htmlacademy.ru/" method="get" oninput="costoutput.value=cost.value">
+      <h2 class="visually-hidden">Фильтры жилья в Седоне</h2>
+      <form action="https://echo.htmlacademy.ru/" method="get">
         <fieldset>
           <legend>Инфраструктура: </legend>
           <ul class="filter-list">
@@ -72,45 +72,46 @@
           </ul>
         </fieldset>
 
-        <div>
-          <label for="cost-id">Стоимость в сутки (р): </label>
-          <div>от 0 | до <output name="costoutput">3000</output></div>
-          <input id="cost-id" type="range" name="cost" min="0" max="4000" step="100" value="3000">
-        </div>
-
-        <button type="submit">Показать</button>
-
-        <div>
-          <span>Найдено: 3</span>
-        </div>
-
         <fieldset>
-          <legend>Сортировка: </legend>
-          <ul>
-            <li>
-              <input id="sorting-by-price" type="radio" name="sorting" value="by-price" checked>
-              <label for="sorting-by-price">По цене</label>
-            </li>
-            <li>
-              <input id="sorting-by-type" type="radio" name="sorting" value="by-type">
-              <label for="sorting-by-type">По типу</label>
-            </li>
-            <li>
-              <input id="sorting-by-rating" type="radio" name="sorting" value="by-rating">
-              <label for="sorting-by-rating">По рейтингу</label>
-            </li>
-          </ul>
+          <legend>Стоимость в сутки (р): </legend>
+          <label for="from-id">ОТ</label>
+          <input id="from-id" type="text" name="from" value="0">
+          <label for="to-id">ДО</label>
+          <input id="to-id" type="text" name="to" value="3000"><br>
+          <span tabindex="0"><img src="img/slider-button-rest.svg" alt="кнопка ползунка"></span>
+          <span>_________________________________</span>
+          <span tabindex="0"><img src="img/slider-button-rest.svg" alt="кнопка ползунка"></span>
         </fieldset>
-
-        <div>
-          <input id="ranking-up" type="radio" name="ranking" value="up">
-          <label for="ranking-up"><img src="img/icon-up-dir.svg" width="11" height="10" alt="фильтр по возрастанию"></label>
-          <input id="ranking-down" type="radio" name="ranking" value="down" checked>
-          <label for="ranking-down"><img src="img/icon-down-dir.svg" width="11" height="10" alt="фильтр по убыванию"></label>
-        </div>
-
+        <button type="submit">Показать</button>
       </form><br>
       <img src="img/blur.jpg" width="1200" height="217" alt="Размытость для фильтра">
+    </section>
+
+    <section class="sorting">
+      <h2>Найдено: 3</h2>
+      <p>Сортировка: </p>
+      <ul class="sorting-list">
+        <li class="sorting-list-item">
+          <a href="#">По цене</a>
+        </li>
+        <li>
+          <a href="#">По типу</a>
+        </li>
+        <li>
+          <a href="#">По рейтингу</a>
+        </li>
+      </ul>
+
+      <div class="ranking">
+        <ul class="pointer">
+          <li class="pointer-up">
+            <a href="#"><img src="img/icon-up-dir.svg" width="11" height="10" alt="По возрастанию"></a>
+          </li>
+          <li class="pointer-down">
+            <a href="#"><img src="img/icon-down-dir.svg" width="11" height="10" alt="По убыванию"></a>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="catalog">
