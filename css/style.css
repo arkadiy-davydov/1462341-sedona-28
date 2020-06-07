@@ -1,6 +1,8 @@
 /* Variables */
 
 :root {
+  --basic-background-grey: #F2F2F2;
+
   --basic-black: #000000;
 
   --basic-dark-grey: #333333;
@@ -9,7 +11,7 @@
   --basic-active-htmlacademy: #BDBBBC;
   --basic-focus-grey: #E5E5E5;
   --basic-hover-grey: #EBEBEB;
-  --basic-background-grey: #FFDDFF;
+
   --basic-light-grey: #F2F2F2;
 
   --basic-active-brown: #503E33;
@@ -56,6 +58,7 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 /*    INDEX.html   */
 /* Main navigation */
 
