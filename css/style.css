@@ -322,7 +322,9 @@ img {
 /* Map */
 
 .map {
-  display: none;
+  width: 1199px;
+  height: 594px;
+  background-image: url(../img/map.png);
 }
 
 /* Footer */
