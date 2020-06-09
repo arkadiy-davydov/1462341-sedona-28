@@ -1,3 +1,22 @@
+/* pt-sans-regular - latin_cyrillic */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans'), local('PTSans-Regular'),
+       url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff2') format('woff2'),
+       url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff') format('woff');
+}
+/* pt-sans-700 - latin_cyrillic */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'), local('PTSans-Bold'),
+       url('../fonts/pt-sans-v11-latin_cyrillic-700.woff2') format('woff2'),
+       url('../fonts/pt-sans-v11-latin_cyrillic-700.woff') format('woff');
+}
+
 /* Variables */
 
 :root {
@@ -31,7 +50,7 @@ body {
   min-width: 1280px;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 26px;
   color: var(--basic-dark-grey);
@@ -173,6 +192,7 @@ img {
   width: 400px;
   height: 256px;
   line-height: 21px;
+  background-color: var(--basic-white);
 }
 
 .attraction-list-item h3 {
@@ -181,7 +201,7 @@ img {
   color: var(--basic-black);
 }
 
-/*    Reservation    */
+/* Reservation */
 
 .form-reservation {
   background-color: var(--basic-white);
@@ -322,9 +342,7 @@ img {
 /* Map */
 
 .map {
-  width: 1199px;
-  height: 594px;
-  background-image: url(../img/map.png);
+
 }
 
 /* Footer */
@@ -380,7 +398,7 @@ img {
   color: var(--basic-light-brown);
 }
 
-/*     Filter     */
+/* Filter */
 
 .filter {
   width: 1200px;
@@ -423,7 +441,7 @@ img {
   border-radius: 2px;
 }
 
-/*     Sorting     */
+/* Sorting */
 
 .sorting {
   color: var(--basic-black);
@@ -469,7 +487,7 @@ img {
   color: var(--basic-black);
 }
 
-/*     Ranking     */
+/* Ranking */
 
 .pointer-up svg:hover {
   fill: var(--basic-black);
@@ -479,7 +497,7 @@ img {
   fill: var(--basic-light-blue);
 }
 
-/*     Catalog     */
+/* Catalog */
 
 .catalog-list {
   list-style: none;
@@ -490,11 +508,24 @@ img {
   height: 90px;
 }
 
+
+
 .catalog-list-item h3,
 .catalog-list-item h3 > a {
   font-weight: bold;
   font-size: 21px;
   color: var(--basic-black);
+}
+
+.catalog-list-item h3:hover,
+.catalog-list-item h3 > a:hover {
+  color: var(--basic-light-blue);
+}
+
+.catalog-list-item h3:active,
+.catalog-list-item h3 > a:active {
+  color: var(--basic-black);
+  opacity: 0.3;
 }
 
 .hotel span {
