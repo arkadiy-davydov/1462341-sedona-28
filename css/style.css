@@ -20,8 +20,6 @@
 /* Variables */
 
 :root {
-  --basic-background: #F2F2F2;
-
   --basic-black: #000000;
 
   --basic-dark-grey: #333333;
@@ -31,6 +29,7 @@
 
   --basic-focus-grey: #E5E5E5;
   --basic-hover-grey: #EBEBEB;
+  --basic-attraction-grey: #EEEEEE;
   --basic-light-grey: #F2F2F2;
 
   --basic-active-brown: #503E33;
@@ -51,11 +50,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'PT Sans', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 14px;
   line-height: 26px;
   color: var(--basic-dark-grey);
   text-transform: uppercase;
-  background-color: var(--basic-background);
+  background-color: var(--basic-light-grey);
 }
 
 a {
@@ -78,66 +79,110 @@ img {
   overflow: hidden;
 }
 
-/*    INDEX.html   */
-/* Main navigation */
-
-.main-navigation {
-  color: var(--basic-black);
-  background-color: var(--basic-white);
+.matrix {
+  width: 1200px;
+  height: 2762px;
+  margin: 0 auto;
+  background-image: url("../img/sedona-new-index-1200px.jpg");
 }
 
-.site-navigation a {
-  font-weight: bold;
-  color: var(--basic-black);
+/* INDEX.html */
+
+/* Header */
+
+.main-header {
+  opacity: 0.5;
+}
+
+.main-navigation {
+  width: 1200px;
+  height: 56px;
+  background-color: var(--basic-white);
 }
 
 .site-navigation {
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
+.site-navigation-item,
+.site-navigation-logo {
+  width: 138px;
+  height: 56px;
+  text-align: center;
+  background-color: cyan;
+}
+
+.site-navigation-item a {
+  line-height: 56px;
+  font-weight: bold;
+  color: var(--basic-black);
+  color: red;
+}
+
+.site-navigation-logo {
+  z-index: 10;
+}
+
+/* Main */
 /* Promo */
 
-.background-photo {
+.promo {
   width: 1200px;
-  height: 509px;
-  background-image: url(../img/background-photo.jpg);
+  height: 724px;
+  background-color: var(--basic-light-blue);
+  background:
+    url("../img/background-bottom.svg") no-repeat left bottom,
+    url("../img/background-photo.jpg") no-repeat left top;
+  opacity: 0.5;
 }
 
 .intro-welcome {
-  width: 458px;
-  height: 352px;
-  background-image: url(../img/intro-welcome.svg);
-}
-
-.background-bottom {
+  display: flex;
   width: 1200px;
-  height: 272px;
-  background-image: url(../img//background-bottom.svg);
+  height: 504px;
 }
 
-.promo {
-  text-align: center;
+.intro-welcome img {
+  width: 456px;
+  height: 350px;
+  margin: auto;
 }
 
 .promo h2 {
-  font-weight: bold;
+  margin-top: 46px;
+  font-weight: 700;
   font-size: 21px;
+  text-align: center;
   color: var(--basic-black);
   background-color: var(--basic-white);
+  color: red;
 }
  .promo p {
+   margin-top: 44px;
+   text-align: center;
    background-color: var(--basic-white);
+   color: red;
  }
 
 /* Features */
 
 .features {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 256px 330px 256px 256px;
   text-align: center;
+  opacity: 0.5;
 }
 
 .real-town {
-  width: 400px;
-  height: 256px;
+  grid-column: 1;
+  grid-row: 1;
   line-height: 21px;
   text-align: center;
   color: var(--basic-white);
@@ -145,13 +190,33 @@ img {
 }
 
 .real-town h3 {
-  font-weight: bold;
+  margin-top: 46px;
+  font-style: normal;
+  font-weight: 700;
   font-size: 21px;
+  line-height: 21px;
+  color: red;
+}
+
+.real-town p {
+  margin-top: 26px;
+  line-height: 21px;
+  color: red;
+}
+
+.features img:first-of-type {
+  grid-column: 2 / 4;
+  grid-row: 1;
 }
 
 .features-list {
-  text-align: center;
+  grid-column: 1 / 4;
+  grid-row: 2;
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .features-list-item {
@@ -161,75 +226,132 @@ img {
   background-color: var(--basic-white);
 }
 
+.features-list-item img {
+  margin-top: 58px;
+  width: 72px;
+  height: 72px;
+}
+
 .features-list-item h3 {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 21px;
+  line-height: 21px;
   color: var(--basic-black);
+  color: red;
+}
+
+.features-list-item p {
+  margin-top: 28px;
+  font-size: 14px;
+  line-height: 21px;
+  color: red;
+}
+
+.features img:last-of-type {
+  grid-column: 1 / 3;
+  grid-row: 3;
+  /* width: 800px;
+  height: 256; */
 }
 
 .devil-bridge {
-  width: 400px;
-  height: 256px;
-  line-height: 21px;
+  grid-column: 3;
+  grid-row: 3;
   text-align: center;
   color: var(--basic-white);
   background-color: var(--basic-light-blue);
 }
 
 .devil-bridge h3 {
-  font-weight: bold;
+  margin-top: 48px;
+  font-weight: 700;
   font-size: 21px;
+  line-height: 21px;
+  color: red;
 }
 
-/* Attraction */
+.devil-bridge p {
+  margin-top: 26px;
+  line-height: 21px;
+  color: red;
+}
 
 .attraction-list {
-  text-align: center;
+  grid-column: 1 / 4;
+  grid-row: 4;
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .attraction-list-item {
   width: 400px;
   height: 256px;
   line-height: 21px;
-  background-color: var(--basic-white);
+  background-color: var(--basic-attraction-grey);
 }
 
 .attraction-list-item h3 {
-  font-weight: bold;
+  margin-top: 46px;
+  font-weight: 700;
   font-size: 21px;
+  line-height: 21px;
   color: var(--basic-black);
+  color: red;
+}
+
+.attraction-list-item p {
+  margin-top: 26px;
+  line-height: 21px;
+  color: red;
 }
 
 /* Reservation */
 
 .form-reservation {
+  margin-top: 55px;
+  margin-left: 383px;
+  width: 435px;
+  height: 149px;
   background-color: var(--basic-white);
+  opacity: 0.5;
 }
 
+
+
 .form-reservation h2 {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 30px;
   line-height: 24px;
   text-align: center;
   color: var(--basic-black);
+  color: red;
 }
 
 .form-reservation p {
+  margin-top: 32px;
   text-align: center;
+  color: red;
 }
 
 .form-title {
+  display: flex;
+  margin: 0 auto;
   width: 568px;
   height: 86px;
   text-align: center;
   background-color: var(--basic-light-brown);
+  opacity: 0.5;
 }
 
-.form-reservation a {
+.form-title span {
+  margin: auto;
   font-weight: bold;
   font-size: 21px;
   color: var(--basic-white);
+  color: red;
 }
 
 .form-title:hover {
@@ -241,7 +363,13 @@ img {
   background-color: var(--basic-active-brown);
 }
 
-.arrival input,
+.map {
+  width: 1200px;
+  height: 594px;
+  opacity: 0.5;
+}
+
+/*.arrival input,
 .departure input {
   width: 346px;
   height: 38px;
@@ -314,8 +442,6 @@ img {
   fill: var(--basic-light-blue);
 }
 
-/* Reservation button */
-
 .reservation-button {
   width: 458px;
   height: 58px;
@@ -337,56 +463,118 @@ img {
 .reservation-button:active {
   color: var(--basic-light-blue);
   background-color: var(--basic-active-blue);
-}
+} */
 
-/* Map */
 
-.map {
-
-}
 
 /* Footer */
 
-.visit-sedona h3,
-.visit-sedona a {
-  font-weight: bold;
-  font-size: 21px;
-  color: var(--basic-black);
+.main-footer,
+.catalog-footer {
+  width: 1200px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.9);
 }
 
-.footer-social {
-  text-align: center;
+.main-footer {
+  position: relative;
+  margin-top: -120px;
+  opacity: 0.5
 }
 
-.footer-social ul {
+.footer-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 1200px;
+  height: 120px;
+
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
+.footer-visitsedona {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 370px;
+  height: 120px;
+}
+
+.footer-visitsedona h3,
+.footer-visitsedona a {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+  color: red;
+}
+
+.footer-visitsedona a {
+  margin-top: -11px;
+}
+
+.footer-social {
+  width: 156px;
+  height: 120px;
+}
+
 .logo-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 156px;
+  height: 120px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.logo-social-item {
+  display: flex;
+  margin: 3px;
   width: 46px;
   height: 48px;
   background-color: var(--basic-light-blue);
 }
 
-.logo-social:hover {
+.logo-social-item a {
+  margin: auto;
+  margin-top: 14px;
+}
+
+.logo-social-item:hover {
   background-color: var(--basic-hover-blue);
 }
 
-.logo-social:active,
-.logo-social svg:active {
+.logo-social-item:active,
+.logo-social-item svg:active {
   background-color: var(--basic-active-blue);
   fill: var(--basic-light-blue);
 }
 
-.htmlacademy span {
+.footer-htmlacademy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+  height: 120px;
   color: var(--basic-black);
+  color: red;
 }
 
-.htmlacademy svg:hover {
+.footer-htmlacademy svg:hover {
   fill: var(--basic-light-blue);
 }
 
-.htmlacademy svg:active {
+.footer-htmlacademy svg:active {
   fill: var(--basic-active-htmlacademy);
 }
 
@@ -508,8 +696,6 @@ img {
   height: 90px;
 }
 
-
-
 .catalog-list-item h3,
 .catalog-list-item h3 > a {
   font-weight: bold;
@@ -540,7 +726,7 @@ img {
   line-height: 21px;
   color: var(--basic-white);
   text-align: center;
-  align-items: center;
+  vertical-align: middle;
   background-color: var(--basic-light-blue);
 }
 
