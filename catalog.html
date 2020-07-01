@@ -31,7 +31,7 @@
           <a href="#map">Карта штата</a>
         </li>
         <li class="site-navigation-item hotels">
-          <a href="#hotels">Гостиницы</a>
+          <a>Гостиницы</a>
         </li>
       </ul>
     </nav>
@@ -41,8 +41,8 @@
     <h1 class="visually-hidden">Добро пожаловать в великолепную Седону</h1>
     <section class="filter">
       <h2 class="visually-hidden">Фильтры жилья в Седоне</h2>
-      <!-- <form action="https://echo.htmlacademy.ru/" method="get">
-        <fieldset>
+      <form action="https://echo.htmlacademy.ru/" method="get">
+        <fieldset class="infrastructure">
           <legend>Инфраструктура: </legend>
           <ul class="filter-list">
             <li class="filter-list-item">
@@ -58,9 +58,9 @@
               <label for="wifi-filter">WI-FI</label>
             </li>
           </ul>
-        </fieldset> -->
+        </fieldset>
 
-        <!-- <fieldset>
+        <fieldset class="housing">
           <legend>Тип жилья: </legend>
           <ul class="filter-list">
             <li class="filter-list-item">
@@ -76,57 +76,68 @@
               <label for="apartment-filter">Апартаменты</label>
             </li>
           </ul>
-        </fieldset> -->
-
-        <!-- <fieldset>
-          <legend>Стоимость в сутки (р): </legend>
-          <label for="from-id">ОТ</label>
-          <input id="from-id" type="text" name="from" value="0">
-          <label for="to-id">ДО</label>
-          <input id="to-id" type="text" name="to" value="3000"><br>
-          <span tabindex="0"><img src="img/slider-button-rest.svg" alt="кнопка ползунка"></span>
-          <span>_________________________________</span>
-          <span tabindex="0"><img src="img/slider-button-rest.svg" alt="кнопка ползунка"></span>
         </fieldset>
-        <button type="submit">Показать</button>
-      </form> -->
+
+        <div class="cost-per-day">
+          <span>Стоимость в сутки (р): </span>
+          <input id="cost-per-day-from" type="text" name="cost-per-day-from" value="ОТ 0">
+          <input id="cost-per-day-to" type="text" name="cost-per-day-to" value="ДО 3000"><br>
+          <div class="cost-partition"></div>
+          <div tabindex="0" class="slider-button-left">
+            <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.3" d="M9.5 19.0909C4.25315 19.0909 0 14.8165 0 9.54546V11.4545C0 16.7255 4.25315 21 9.5 21C14.7459 21 19 16.7255 19 11.4545V9.54546C19 14.8165 14.7459 19.0909 9.5 19.0909Z" fill="#ABABAB"/>
+            <path d="M9.5 19.0909C14.7467 19.0909 19 14.8173 19 9.54545C19 4.27365 14.7467 0 9.5 0C4.25329 0 0 4.27365 0 9.54545C0 14.8173 4.25329 19.0909 9.5 19.0909Z" fill="white"/>
+            <path d="M9.5001 11.4545C10.5494 11.4545 11.4001 10.5998 11.4001 9.54546C11.4001 8.4911 10.5494 7.63637 9.5001 7.63637C8.45076 7.63637 7.6001 8.4911 7.6001 9.54546C7.6001 10.5998 8.45076 11.4545 9.5001 11.4545Z" fill="#ABABAB"/>
+            </svg>
+          </div>
+          <div class="slider-line"></div>
+          <div class="slider-line-pale"></div>
+          <div tabindex="0" class="slider-button-right">
+            <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.3" d="M9.5 19.0909C4.25315 19.0909 0 14.8165 0 9.54546V11.4545C0 16.7255 4.25315 21 9.5 21C14.7459 21 19 16.7255 19 11.4545V9.54546C19 14.8165 14.7459 19.0909 9.5 19.0909Z" fill="#ABABAB"/>
+            <path d="M9.5 19.0909C14.7467 19.0909 19 14.8173 19 9.54545C19 4.27365 14.7467 0 9.5 0C4.25329 0 0 4.27365 0 9.54545C0 14.8173 4.25329 19.0909 9.5 19.0909Z" fill="white"/>
+            <path d="M9.5001 11.4545C10.5494 11.4545 11.4001 10.5998 11.4001 9.54546C11.4001 8.4911 10.5494 7.63637 9.5001 7.63637C8.45076 7.63637 7.6001 8.4911 7.6001 9.54546C7.6001 10.5998 8.45076 11.4545 9.5001 11.4545Z" fill="#ABABAB"/>
+            </svg>
+          </div>
+          <button type="submit">Показать</button>
+        </div>
+      </form>
     </section>
 
 
 
     <section class="sorting">
-      <!-- <h2>Найдено: 3</h2>
+      <h2>Найдено: 3</h2>
       <p>Сортировка: </p>
+
       <ul class="sorting-list">
         <li class="sorting-list-item">
-          <a href="#">По цене</a>
+          <a href="#price">По цене</a>
         </li>
-        <li>
-          <a href="#">По типу</a>
+        <li class="sorting-list-item">
+          <a href="#type">По типу</a>
         </li>
-        <li>
-          <a href="#">По рейтингу</a>
+        <li class="sorting-list-item">
+          <a href="#rating">По рейтингу</a>
         </li>
-      </ul> -->
+      </ul>
 
-      <!-- <div class="ranking">
-        <ul class="pointer">
-          <li class="pointer-up">
-            <a href="#">
-              <svg width="11" height="10" viewBox="0 0 11 10" fill="#CACACA" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.5 0L0 10H11L5.5 0Z" />
-              </svg>
-            </a>
-          </li>
-          <li class="pointer-down">
-            <a href="#">
-              <svg width="11" height="10" viewBox="0 0 11 10" fill="#81B3D2" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.5 10L0 0H11" />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div> -->
+      <div class="pointer-up">
+        <a href="#pointer-up">
+          <svg width="11" height="10" viewBox="0 0 11 10" fill="#CACACA" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.5 0L0 10H11L5.5 0Z" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="pointer-down">
+        <a href="#pointer-down">
+          <svg width="11" height="10" viewBox="0 0 11 10" fill="#81B3D2" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.5 10L0 0H11" />
+          </svg>
+        </a>
+      </div>
+
     </section>
 
     <!-- Amara Resort & Spa -->
