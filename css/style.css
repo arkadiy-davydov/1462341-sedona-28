@@ -22,6 +22,8 @@
 :root {
   --basic-black: #000000;
   --basic-black-opacity-03: rgba(0, 0, 0, 0.3);
+  --basic-box-shadow-form: rgba(0, 1, 1, 0.15);
+  --basic-box-shadow-page: rgba(0, 1, 1, 0.2);
 
   --basic-dark-grey: #333333;
   --basic-rating-grey: #666666;
@@ -48,7 +50,7 @@
 /* Global */
 
 body {
-  min-width: 1280px;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
   font-family: 'PT Sans', 'Arial', sans-serif;
@@ -70,13 +72,17 @@ img {
   height: auto;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -87,29 +93,29 @@ img {
 
 .index-matrix {
   width: 1200px;
-  height: 2762px;
-  border-left: 40px solid #ddd;
-  border-right: 40px solid #ddd;
+  min-height: 2762px;
   margin: 0 auto;
+  background-color: var(--basic-white);
+  box-shadow: 0px 5px 15px var(--basic-box-shadow-page);
 }
 
 /* Header */
 
 .main-navigation {
-  width: 1200px;
-  min-height: 56px;
   background-color: var(--basic-white);
   position: relative;
 }
 
 .site-navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-wrap: wrap;
+  width: 1200px;
   margin: 0;
   padding: 0;
   list-style: none;
+  min-height: 56px;
 }
 
 .site-navigation-item {
@@ -118,11 +124,8 @@ img {
 }
 
 .site-navigation-item a {
-  display: block;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 26px;
-  margin-top: 14px;
+  line-height: 56px;
   color: var(--basic-black);
 }
 
@@ -180,15 +183,16 @@ img {
 }
 
 .promo h2 {
-  margin-top: 46px;
+  margin-top: 45px;
   font-weight: 700;
   font-size: 21px;
+  line-height: 27.5px;
   text-align: center;
   color: var(--basic-black);
   background-color: var(--basic-white);
 }
  .promo p {
-   margin-top: 44px;
+   margin-top: 43px;
    text-align: center;
    background-color: var(--basic-white);
  }
@@ -198,7 +202,7 @@ img {
 .features {
   display: grid;
   grid-template-columns: 400px 400px 400px;
-  grid-template-rows: 256px 330px 256px 256px;
+  grid-template-rows: 256px 329px 255px 256px;
   text-align: center;
 }
 
@@ -325,7 +329,7 @@ img {
 .form-reservation {
   position: relative;
   width: 1200px;
-  height: 291px;
+  height: 293px;
   background-color: var(--basic-white);
 }
 
@@ -343,7 +347,7 @@ img {
   font-size: 30px;
   line-height: 24px;
   text-align: center;
-  margin-top: 0;
+  margin-top: 2px;
   color: var(--basic-black);
 }
 
@@ -389,6 +393,7 @@ img {
   width: 568px;
   height: 395px;
   background-color: var(--basic-white);
+  box-shadow: 0px 7px 15px var(--basic-box-shadow-form);
 }
 
 .search-hotel lable {
@@ -414,7 +419,8 @@ img {
   width: 346px;
   height: 38px;
   box-sizing: border-box;
-  border: 0;
+  padding-left: 10px;
+  border: 2px solid transparent;
   background-color: var(--basic-light-grey);
 }
 
@@ -428,7 +434,7 @@ img {
   width: 114px;
   height: 38px;
   box-sizing: border-box;
-  border: 0;
+  border: 2px solid transparent;
   background-color: var(--basic-light-grey);
 }
 
@@ -471,6 +477,7 @@ img {
 #arrival {
   grid-column: 3 / 6;
   grid-row: 2;
+  outline: none;
 }
 
 .search-calendar:nth-of-type(1) {
@@ -486,6 +493,7 @@ img {
 #departure {
   grid-column: 3 / 6;
   grid-row: 3;
+  outline: none;
 }
 
 .search-calendar:nth-of-type(2) {
@@ -501,6 +509,7 @@ img {
 #adults {
   grid-column: 3;
   grid-row: 4;
+  outline: none;
 }
 
 .adults-minus {
@@ -524,12 +533,14 @@ img {
   grid-column: 4;
   grid-row: 4;
   margin-top: 6px;
+  padding-left: 26px;
   text-align: center;
 }
 
 #children {
   grid-column: 5;
   grid-row: 4;
+  outline: none;
 }
 
 .children-minus {
@@ -560,7 +571,6 @@ img {
   vertical-align: middle;
   width: 458px;
   height: 58px;
-  box-sizing: border-box;
   border: 0;
   background-color: var(--basic-light-blue);
 }
@@ -657,8 +667,23 @@ img {
 }
 
 .logo-social-item a {
-  margin: auto;
-  margin-top: 13px;
+  width: 46px;
+  height: 48px;
+}
+
+.logo-social-item:nth-child(1) a {
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+.logo-social-item:nth-child(2) a {
+  padding-left: 16px;
+  padding-top: 12px;
+}
+
+.logo-social-item:nth-child(3) a {
+  padding-left: 13px;
+  padding-top: 14px;
 }
 
 .logo-social-item:hover {
@@ -705,9 +730,9 @@ img {
 .catalog-matrix {
   width: 1200px;
   min-height: 933px;
-  border-left: 40px solid #ddd;
-  border-right: 40px solid #ddd;
   margin: 0 auto;
+  background-color: var(--basic-white);
+  box-shadow: 0px 5px 15px var(--basic-box-shadow-page);
 }
 
 /* Main navigation */
@@ -726,8 +751,8 @@ img {
 
 .filter form {
   display: grid;
-  grid-template-columns: 72px 254px 411px 463px;
-  grid-template-rows: 25px 192px;
+  grid-template-columns: 72px 255px 410px 463px;
+  grid-template-rows: 25px 124px 68px;
 }
 
 .filter fieldset {
@@ -762,9 +787,58 @@ img {
   grid-row: 2 / -1;
 }
 
+.filter-list-item label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  width: 128px;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox:checked + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox:focus + label::before {
+  outline: 2px dashed var(--basic-light-grey);
+  outline-offset: 4px;
+}
+
+.infrastructure label {
+  padding-left: 39px;
+}
+
 .filter fieldset.housing {
   grid-column: 3;
   grid-row: 2 / -1;
+}
+
+.housing legend {
+  margin-left: -1px;
+}
+
+.housing label {
+  padding-left: 42px;
 }
 
 /* Cost Per Day */
@@ -774,7 +848,7 @@ img {
   grid-row: 2;
   display: grid;
   grid-template-columns: 73px 160px 157px 73px;
-  grid-template-rows:32px 36px 55px 36px 34px;
+  grid-template-rows:32px 36px 55px;
   position: relative;
 }
 
@@ -889,12 +963,12 @@ img {
 }
 
 .filter button {
-  grid-column: 2 / 4;
-  grid-row: 4;
+  grid-column: 4;
+  grid-row: 3;
   width: 137px;
   height: 36px;
   box-sizing: border-box;
-  margin-left: 85px;
+  margin-left: 158px;
   font-size: inherit;
   line-height: inherit;
   text-transform: inherit;
@@ -903,6 +977,11 @@ img {
   background: transparent;
   border: 2px solid #FFFFFF;
   border-radius: 2px;
+}
+
+.filter button:hover {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
 }
 
 /* Sorting */
