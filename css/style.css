@@ -22,7 +22,7 @@
 :root {
   --basic-black: #000000;
   --basic-black-opacity-03: rgba(0, 0, 0, 0.3);
-  --basic-box-shadow-form: rgba(0, 1, 1, 0.15);
+  --basic-box-shadow-search-hotel: rgba(0, 1, 1, 0.15);
   --basic-box-shadow-page: rgba(0, 1, 1, 0.2);
 
   --basic-dark-grey: #333333;
@@ -393,10 +393,10 @@ input[type="radio"].visually-hidden {
   width: 568px;
   height: 395px;
   background-color: var(--basic-white);
-  box-shadow: 0px 7px 15px var(--basic-box-shadow-form);
+  box-shadow: 0px 7px 15px var(--basic-box-shadow-search-hotel);
 }
 
-.search-hotel lable {
+.search-hotel label {
   font-style: normal;
   font-weight: 700;
   margin-top: 6px;
@@ -469,7 +469,7 @@ input[type="radio"].visually-hidden {
   fill: var(--basic-light-blue);
 }
 
-.search-hotel lable:nth-of-type(1) {
+.search-hotel label:nth-of-type(1) {
   grid-column: 2;
   grid-row: 2;
 }
@@ -485,7 +485,7 @@ input[type="radio"].visually-hidden {
   grid-row: 2;
 }
 
-.search-hotel lable:nth-of-type(2) {
+.search-hotel label:nth-of-type(2) {
   grid-column: 2;
   grid-row: 3;
 }
@@ -501,7 +501,7 @@ input[type="radio"].visually-hidden {
   grid-row: 3;
 }
 
-.search-hotel lable:nth-of-type(3) {
+.search-hotel label:nth-of-type(3) {
   grid-column: 2;
   grid-row: 4;
 }
@@ -529,7 +529,7 @@ input[type="radio"].visually-hidden {
   left: 90px;
 }
 
-.search-hotel lable:nth-of-type(4) {
+.search-hotel label:nth-of-type(4) {
   grid-column: 4;
   grid-row: 4;
   margin-top: 6px;
@@ -820,7 +820,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-input-checkbox:focus + label::before {
-  outline: 2px dashed var(--basic-light-grey);
+  outline: 2px solid var(--basic-white);
   outline-offset: 4px;
 }
 
