@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* pt-sans-regular - latin_cyrillic */
 @font-face {
   font-family: 'PT Sans';
@@ -163,6 +170,7 @@ input[type="radio"].visually-hidden {
   width: 138px;
   height: 70px;
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -174,9 +182,10 @@ input[type="radio"].visually-hidden {
 /* Promo */
 
 .promo {
+  position: relative;
   width: 1200px;
   height: 724px;
-  background-color: var(--basic-light-blue);
+  background-color: var(--basic-active-blue);
   background:
     url("../img/background-bottom-mask.svg") no-repeat left bottom,
     url("../img/background-photo.jpg") no-repeat left top;
@@ -203,12 +212,10 @@ input[type="radio"].visually-hidden {
   line-height: 27.5px;
   text-align: center;
   color: var(--basic-black);
-  background-color: var(--basic-white);
 }
  .promo p {
    margin-top: 43px;
    text-align: center;
-   background-color: var(--basic-white);
  }
 
 /* Features */
@@ -936,7 +943,7 @@ input[type="radio"].visually-hidden {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 1200px;
-  height: 120px;
+  min-height: 120px;
 
   margin: 0;
   padding: 0;
@@ -1051,7 +1058,7 @@ input[type="radio"].visually-hidden {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 370px;
-  height: 120px;
+  min-height: 120px;
 }
 
 .footer-htmlacademy svg {
@@ -1097,6 +1104,7 @@ input[type="radio"].visually-hidden {
 .filter {
   width: 1200px;
   min-height: 217px;
+  background-color: var(--basic-active-blue);
   background-image: url(../img/blur.jpg);
 }
 
